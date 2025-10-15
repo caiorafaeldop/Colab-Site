@@ -32,23 +32,23 @@ const AboutSection = () => {
   const qualifications = [
     {
       icon: <GraduationCap className="w-6 h-6" />,
-      text: "Mestre em Direito das Relações Sociais pela PUC/SP"
+      text: "Lorem ipsum dolor sit amet consectetur"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      text: "Professor de Direito"
+      text: "Adipiscing elit sed do eiusmod"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      text: "Ex-Presidente da OAB - PB"
+      text: "Tempor incididunt ut labore"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      text: "Ex-Conselheiro Federal da OAB"
+      text: "Et dolore magna aliqua"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      text: "Presidente da Comissão Nacional de Direitos Sociais da OAB"
+      text: "Ut enim ad minim veniam"
     }
   ];
 
@@ -64,8 +64,8 @@ const AboutSection = () => {
             }`}>
               <div className="aspect-square">
                 <img
-                  src="https://res.cloudinary.com/dkcrbcfcy/image/upload/v1758593450/maia-advocacia/l8xukaskybxoqm02pkiu.jpg"
-                  alt="Dr. Paulo Maia - Advogado Trabalhista"
+                  src="https://via.placeholder.com/600x600/e5e7eb/6b7280?text=Imagem+Demo"
+                  alt="Imagem de Demonstração"
                   className="w-full h-full object-cover"
                   onLoad={() => setDesktopImageLoaded(true)}
                 />
@@ -88,8 +88,8 @@ const AboutSection = () => {
               }`}>
                 <div className="aspect-square">
                   <img
-                    src="https://res.cloudinary.com/dkcrbcfcy/image/upload/v1758590979/maia-advocacia/lvql1q9gchj5owiubyg4.jpg"
-                    alt="Dr. Paulo Maia - Advogado Trabalhista"
+                    src="https://via.placeholder.com/600x600/e5e7eb/6b7280?text=Imagem+Demo"
+                    alt="Imagem de Demonstração"
                     className="w-full h-full object-cover"
                     onLoad={() => setMobileImageLoaded(true)}
                   />
@@ -101,10 +101,10 @@ const AboutSection = () => {
               <div className="text-center mb-6">
                 <div className="w-full bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-4 rounded-lg border border-primary/20 card-shadow mb-4">
                   <h2 className="text-2xl font-playfair font-bold text-primary mb-2">
-                    DR. PAULO MAIA
+                    SOBRE NÓS
                   </h2>
                   <p className="text-lg text-gold-accent font-medium">
-                    Advogado
+                    Equipe Profissional
                   </p>
                 </div>
               </div>
@@ -146,22 +146,22 @@ const AboutSection = () => {
               <div className="border border-gray-300 p-6 rounded-lg card-shadow bg-white">
                 <div>
                   <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-primary mb-6">
-                    Dr. Paulo Maia
+                    Sobre Nós
                   </h2>
                   <p className="text-xl text-gold-accent font-medium mb-6">
-                    Advogado
+                    Equipe Profissional
                   </p>
                 </div>
 
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Mestre em Direito das Relações Sociais pela PUC/SP, com vasta experiência 
-                    em Direito do Trabalho e atuação destacada na advocacia e ensino jurídico.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua.
                   </p>
 
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Ex-Presidente da OAB-PB e atual Conselheiro Federal da OAB, 
-                    com sólida formação acadêmica e compromisso com a excelência profissional.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                    ut aliquip ex ea commodo consequat.
                   </p>
                 </div>
 

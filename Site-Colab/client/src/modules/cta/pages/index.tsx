@@ -57,12 +57,12 @@ const CTASection = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Telefone",
-      value: "(83) 9109-0902"
+      value: "(11) 99999-9999"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       label: "E-mail",
-      value: "contato@paulomaia.adv.br"
+      value: "contato@exemplo.com.br"
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -72,8 +72,8 @@ const CTASection = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Endereço",
-      value: "Green Tower - Av. Sen. Rui Carneiro 293, Sala 1301",
-      subtitle: "João Pessoa, PB, 58032-010"
+      value: "Endereço Exemplo",
+      subtitle: "Cidade, Estado, CEP"
     }
   ];
 
@@ -84,12 +84,12 @@ const CTASection = () => {
           <div className="md:hidden mb-6">
             <div className="inline-block bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-3 rounded-lg border border-primary/20 shadow-sm">
               <h2 className="text-xl font-playfair font-bold text-primary">
-                Precisa de Orientação Jurídica?
+                Entre em Contato
               </h2>
             </div>
           </div>
           <h2 className="hidden md:block text-4xl lg:text-5xl font-playfair font-bold text-primary mb-6">
-            Precisa de Orientação Jurídica?
+            Entre em Contato
           </h2>
           {/* <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Envie sua mensagem e receba orientação profissional sobre seu caso específico. 
@@ -135,14 +135,6 @@ const CTASection = () => {
                     {info.subtitle && (
                       <p className="text-muted-foreground text-sm">{info.subtitle}</p>
                     )}
-                    {info.label === "Endereço" && (
-                      <button
-                        onClick={() => window.open('https://maps.google.com/?q=Green+Tower+Av.+Sen.+Rui+Carneiro+293+sala+1301+João+Pessoa+PB', '_blank')}
-                        className="text-primary hover:text-primary/80 text-sm underline mt-1"
-                      >
-                        Ver no Google Maps
-                      </button>
-                    )}
                   </div>
                 </div>
               ))}
@@ -157,7 +149,7 @@ const CTASection = () => {
                 Envie sua Mensagem
               </CardTitle>
               <p className="text-muted-foreground">
-                Descreva sua situação e entraremos em contato para uma orientação inicial.
+                Preencha o formulário e entraremos em contato.
               </p>
             </CardHeader>
             <CardContent>
@@ -201,7 +193,7 @@ const CTASection = () => {
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
-                    placeholder="Descreva sua situação jurídica ou dúvida..."
+                    placeholder="Digite sua mensagem..."
                     className="min-h-[120px]"
                     required
                   />
@@ -248,14 +240,14 @@ const CTASection = () => {
             <CardContent className="p-0">
               <div className="h-80 w-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.489!2d-34.8651560!3d-7.1162340!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae32f48f0d0d0d%3A0xabcdef1234567890!2sGreen%20Tower%20-%20Av.%20Sen.%20Rui%20Carneiro%2C%20293%20-%20Sala%201301%2C%20Manaíra%2C%20João%20Pessoa%20-%20PB%2C%2058032-010!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1!2d-46.6333!3d-23.5505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAxLjgiUyA0NsKwMzcnNTkuOSJX!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localização Paulo Maia Advocacia - Green Tower"
+                  title="Localização"
                 ></iframe>
               </div>
               <div className="p-6 text-center bg-primary text-primary-foreground">
@@ -263,17 +255,11 @@ const CTASection = () => {
                   Nossa Localização
                 </h3>
                 <p className="opacity-90 mb-2">
-                  Green Tower - Av. Sen. Rui Carneiro 293, Sala 1301
+                  Endereço Exemplo
                 </p>
-                <p className="opacity-90 mb-4">
-                  João Pessoa, PB, 58032-010
+                <p className="opacity-90">
+                  Cidade, Estado, CEP
                 </p>
-                <button
-                  onClick={() => window.open('https://maps.google.com/?q=Green+Tower+Av.+Sen.+Rui+Carneiro+293+Sala+1301+João+Pessoa+PB+58032-010', '_blank')}
-                  className="bg-primary-foreground text-primary px-4 py-2 rounded-lg hover:bg-primary-foreground/90 transition-colors font-medium"
-                >
-                  Abrir no Google Maps
-                </button>
               </div>
             </CardContent>
           </Card>

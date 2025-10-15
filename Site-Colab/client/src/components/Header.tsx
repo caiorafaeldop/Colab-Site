@@ -39,7 +39,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const navItems = [
-    { name: "Áreas de Atuação", href: "#trabalhadores" },
+    { name: "Serviços", href: "#trabalhadores" },
     { name: "Sobre Nós", href: "#sobre" },
     { name: "Blog", href: "#blog" },
     { name: "Contato", href: "#contato" },
@@ -171,11 +171,9 @@ const Header = () => {
               className="cursor-pointer"
               onClick={() => navigate('/')}
             >
-              <img
-                src="https://res.cloudinary.com/dkcrbcfcy/image/upload/v1758769681/maia-advocacia/nqg4e1k1ygheiawznpl0.png"
-                alt="Paulo Maia Advocacia - Logo Oficial"
-                className="h-12 md:h-16 w-auto"
-              />
+              <div className="text-2xl md:text-3xl font-bold text-primary">
+                Logo
+              </div>
             </div>
           </div>
 
@@ -241,9 +239,9 @@ const Header = () => {
               <Button 
                 variant="default"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                onClick={() => window.open(`https://wa.me/${config.contact.whatsapp}?text=Olá, gostaria de agendar uma consulta sobre direitos trabalhistas.`, '_blank')}
+                onClick={() => window.open(`https://wa.me/${config.contact.whatsapp}?text=Olá, gostaria de mais informações.`, '_blank')}
               >
-                Agendar Consulta Inicial
+                Entre em Contato
               </Button>
             )}
           </div>

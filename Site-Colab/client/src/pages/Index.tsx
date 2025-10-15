@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import MobileLawyerPhoto from "@/components/MobileLawyerPhoto";
 import FloatingButtons from "@/components/FloatingButtons";
 import { 
   HeroSection,
@@ -19,7 +18,6 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <MobileLawyerPhoto />
       <main>
         <HeroSection />
         <WorkersSection />

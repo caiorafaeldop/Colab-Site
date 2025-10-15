@@ -15,16 +15,16 @@ export const config = {
 
   // Application
   app: {
-    name: import.meta.env.VITE_APP_NAME || 'Maia Advocacia',
+    name: import.meta.env.VITE_APP_NAME || 'Site Demo',
     version: import.meta.env.VITE_APP_VERSION || '1.0.0',
     env: import.meta.env.VITE_APP_ENV || 'development',
   },
 
   // Contact Information
   contact: {
-    whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '558391090902',
-    email: import.meta.env.VITE_EMAIL || 'contato@paulomaia.adv.br',
-    phone: import.meta.env.VITE_PHONE || '(83) 9109-0902',
+    whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999',
+    email: import.meta.env.VITE_EMAIL || 'contato@exemplo.com.br',
+    phone: import.meta.env.VITE_PHONE || '(11) 99999-9999',
   },
 
   // Google Maps

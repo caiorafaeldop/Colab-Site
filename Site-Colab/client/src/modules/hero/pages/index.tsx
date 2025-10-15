@@ -2,12 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Shield, Heart, Award } from "lucide-react";
 import { useState, useEffect } from "react";
-import { HeroImageSkeleton } from "@/components/ui/article-skeleton";
 
 const HeroSection = () => {
   const [titleVisible, setTitleVisible] = useState(false);
   const [highlightsVisible, setHighlightsVisible] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     // Animação escalonada
@@ -23,15 +21,15 @@ const HeroSection = () => {
   const highlights = [
     {
       icon: <Award className="w-6 h-6" />,
-      text: "Especialista em Direito Trabalhista há mais de 30 anos"
+      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      text: "Total conformidade com as normas éticas da OAB"
+      text: "Sed do eiusmod tempor incididunt ut labore et dolore"
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      text: "Horário de Atendimento de Segunda a Sexta: 9h às 18h"
+      text: "Ut enim ad minim veniam quis nostrud exercitation"
     }
   ];
 
@@ -45,16 +43,16 @@ const HeroSection = () => {
               <h1 className={`text-4xl lg:text-6xl font-playfair font-bold text-primary leading-tight transition-all duration-1000 ease-out ${
                 titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
               }`}>
-                Soluções Trabalhistas com
-                <span className="text-brown-dark"> Excelência</span>
-                <span className="text-gold-accent"> e Ética</span>
+                Lorem Ipsum Dolor Sit
+                <span className="text-brown-dark"> Amet Consectetur</span>
+                <span className="text-gold-accent"> Adipiscing</span>
               </h1>
               
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 ease-out ${
                 titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
               }`} style={{ transitionDelay: '0.3s' }}>
-                Defendendo seus direitos trabalhistas com expertise 
-                e compromisso total com seus interesses
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
 
@@ -62,9 +60,9 @@ const HeroSection = () => {
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg"
-                onClick={() => window.open('https://wa.me/558391090902?text=Olá, gostaria de uma consulta sobre meus direitos trabalhistas.', '_blank')}
+                onClick={() => window.open('https://wa.me/5511999999999?text=Olá, gostaria de mais informações.', '_blank')}
               >
-                Fale com um Especialista
+                Entre em Contato
               </Button>
             </div>
 
@@ -95,16 +93,10 @@ const HeroSection = () => {
 
           {/* Image - Hidden on mobile */}
           <div className="relative hidden md:block">
-            {!imageLoaded && <HeroImageSkeleton />}
-            <div className={`relative overflow-hidden rounded-2xl elegant-shadow transition-opacity duration-500 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}>
-              <img
-                src="https://res.cloudinary.com/dkcrbcfcy/image/upload/v1758590979/maia-advocacia/lvql1q9gchj5owiubyg4.jpg"
-                alt="Escritório de advocacia profissional"
-                className="w-full h-[600px] object-cover"
-                onLoad={() => setImageLoaded(true)}
-              />
+            <div className="relative overflow-hidden rounded-2xl elegant-shadow">
+              <div className="w-full h-[600px] bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                <p className="text-muted-foreground text-lg">Imagem de Demonstração</p>
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
           </div>
