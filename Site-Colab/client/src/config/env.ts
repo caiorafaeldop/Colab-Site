@@ -23,7 +23,7 @@ export const config = {
   // Contact Information
   contact: {
     whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999',
-    email: import.meta.env.VITE_EMAIL || 'contato@exemplo.com.br',
+    email: import.meta.env.VITE_EMAIL || 'nucleocolabufpb@gmail.com',
     phone: import.meta.env.VITE_PHONE || '(11) 99999-9999',
   },
 

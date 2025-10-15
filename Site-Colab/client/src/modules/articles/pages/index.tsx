@@ -161,12 +161,12 @@ const BlogSection = () => {
           <div className="md:hidden mb-6">
             <div className="inline-block bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-3 rounded-lg border border-primary/20 shadow-sm">
               <h2 className="text-xl font-playfair font-bold text-primary">
-                Conteúdo Jurídico de Qualidade
+                Notícias
               </h2>
             </div>
           </div>
           <h2 className="hidden md:block text-2xl md:text-4xl lg:text-5xl font-playfair font-bold text-primary mb-4 md:mb-6">
-            Conteúdo Jurídico de Qualidade
+            Notícias
           </h2>
           {/* <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Mantemos você informado sobre as principais novidades do Direito Trabalhista 

@@ -39,7 +39,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const navItems = [
-    { name: "Serviços", href: "#trabalhadores" },
+    // { name: "Serviços", href: "#trabalhadores" },
     { name: "Sobre Nós", href: "#sobre" },
     { name: "Blog", href: "#blog" },
     { name: "Contato", href: "#contato" },
@@ -128,7 +128,7 @@ const Header = () => {
 
   return (
     <>
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <header className="fixed top-0 w-full backdrop-blur-sm border-b border-border z-50" style={{ backgroundColor: '#F9F7F3' }}>
       {/* Top contact bar - Hidden on mobile */}
       <div className="bg-primary text-primary-foreground py-1.5 hidden md:block">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
@@ -151,10 +151,6 @@ const Header = () => {
           {/* Contact Info */}
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <span>{config.contact.phone}</span>
-            </div>
-            <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
               <span>{config.contact.email}</span>
             </div>
@@ -171,9 +167,11 @@ const Header = () => {
               className="cursor-pointer"
               onClick={() => navigate('/')}
             >
-              <div className="text-2xl md:text-3xl font-bold text-primary">
-                Logo
-              </div>
+              <img 
+                src="/colab name.png" 
+                alt="Núcleo Colab" 
+                className="h-12 md:h-16 w-auto"
+              />
             </div>
           </div>
 
@@ -183,7 +181,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-foreground hover:text-primary smooth-transition font-medium"
+                className="text-gray-800 hover:text-primary smooth-transition font-medium"
               >
                 {item.name}
               </button>
@@ -197,7 +195,16 @@ const Header = () => {
                 <DropdownMenuTrigger asChild>
                   <Button 
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    className="border-secondary text-secondary hover:text-white"
+                    style={{ borderColor: '#01304A', color: '#01304A' }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#01304A';
+                      e.currentTarget.style.color = 'white';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                      e.currentTarget.style.color = '#01304A';
+                    }}
                   >
                     <Shield className="w-4 h-4 mr-2" />
                     Área Admin
@@ -238,7 +245,10 @@ const Header = () => {
             ) : (
               <Button 
                 variant="default"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="text-white"
+                style={{ backgroundColor: '#01304A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#023a5c'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#01304A'}
                 onClick={() => window.open(`https://wa.me/${config.contact.whatsapp}?text=Olá, gostaria de mais informações.`, '_blank')}
               >
                 Entre em Contato
@@ -248,7 +258,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden"
+            className="lg:hidden text-gray-800"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <Menu className="w-6 h-6" />
@@ -263,7 +273,7 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-foreground hover:text-primary smooth-transition font-medium text-left"
+                  className="text-gray-800 hover:text-primary smooth-transition font-medium text-left"
                 >
                   {item.name}
                 </button>
@@ -271,11 +281,7 @@ const Header = () => {
               
               {/* Contact info for mobile */}
               <div className="border-t pt-4 mt-4 md:hidden">
-                <div className="flex flex-col space-y-3 text-sm text-muted-foreground">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4" />
-                    <span>{config.contact.phone}</span>
-                  </div>
+                <div className="flex flex-col space-y-3 text-sm text-gray-700">
                   <div className="flex items-center space-x-2">
                     <Mail className="w-4 h-4" />
                     <span>{config.contact.email}</span>

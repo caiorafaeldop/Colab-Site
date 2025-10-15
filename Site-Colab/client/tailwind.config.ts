@@ -77,7 +77,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				'playfair': ['Playfair Display', 'serif'],
+				'playfair': ['Crimson Pro', 'serif'],
+				'crimson': ['Crimson Pro', 'serif'],
 				'lato': ['Lato', 'sans-serif']
 			},
 			borderRadius: {

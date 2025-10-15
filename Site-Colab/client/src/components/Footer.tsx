@@ -12,7 +12,7 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 const Footer = () => {
   const quickLinks = [
     { name: "Início", href: "#inicio" },
-    { name: "Serviços", href: "#trabalhadores" },  
+    // { name: "Serviços", href: "#trabalhadores" },  
     { name: "Sobre", href: "#sobre" },
     { name: "Blog", href: "#blog" },
     { name: "Contato", href: "#contato" },
@@ -83,7 +83,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services
           <div>
             <h4 className="text-lg font-semibold mb-6">
               Serviços
@@ -97,7 +97,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact info */}
           <div>

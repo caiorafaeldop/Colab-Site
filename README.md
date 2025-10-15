@@ -110,15 +110,47 @@ git clone https://github.com/caiorafaeldop/Colab-Site.git
 cd "Site-Colab"
 ```
 
-### ▶️ Passo 2: Rodar o Frontend
+### ▶️ Passo 2: Abrir 2 Terminais
 
-É aqui que você vai passar mais tempo! Vamos fazer o site aparecer no navegador:
+**IMPORTANTE:** Você vai precisar de **2 terminais abertos** ao mesmo tempo!
+- 🖥️ **Terminal 1:** Para rodar o servidor (backend)
+- 🎨 **Terminal 2:** Para rodar o site (frontend)
+
+---
+
+### 🔧 Passo 3: Rodar o Servidor (Backend)
+
+**No Terminal 1**, rode estes comandos:
+
+```bash
+# Entre na pasta do servidor
+cd Site-Colab/server
+
+# Instale as dependências
+npm install
+
+# Rode o servidor
+npm run start:dev
+```
+
+✅ **Servidor rodando!** Você vai ver algo como:
+```
+[Nest] Application successfully started
+```
+
+**Deixe esse terminal aberto!** O servidor precisa ficar rodando.
+
+---
+
+### 🎨 Passo 4: Rodar o Site (Frontend)
+
+**Abra um SEGUNDO terminal** e rode:
 
 ```bash
 # Entre na pasta do client
 cd Site-Colab/client
 
-# Instale as dependências (todos os pacotinhos que o projeto precisa)
+# Instale as dependências
 yarn install
 
 # Rode o projeto em modo desenvolvimento
@@ -136,7 +168,27 @@ Abra seu navegador e acesse `http://localhost:5173/` - o site vai estar lá! �
 
 **Dica:** Toda vez que você salvar um arquivo, o site atualiza sozinho no navegador. É mágica! ✨
 
-### 🗄️ Passo 3: Rodar o Backend (Opcional)
+---
+
+### 📝 Resumo Rápido
+
+**Terminal 1 (Servidor):**
+```bash
+cd Site-Colab/server
+npm run start:dev
+```
+
+**Terminal 2 (Site):**
+```bash
+cd Site-Colab/client
+yarn dev
+```
+
+**Mantenha os 2 terminais abertos enquanto estiver desenvolvendo!**
+
+---
+
+### 🗄️ Passo 5: Configurar Banco de Dados (Se necessário)
 
 Se você quiser testar funcionalidades como formulários de contato ou login:
 
@@ -209,6 +261,14 @@ Usamos **TailwindCSS**, que são classes CSS prontas. Por exemplo:
 - `text-primary` = cor primária do tema
 
 Documentação do Tailwind: https://tailwindcss.com/docs
+
+
+**Cores do tema:**
+- Principal: `#780000` (Vermelho escuro)
+- Secundária: `#01304A` (Azul marinho)
+- Terciária: `#C1121F` (Vermelho vibrante)
+- Quaternária: `#669BBB` (Azul claro)
+- Background: `#fdf0d5` (bege)
 
 ---
 

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, User, Users } from "lucide-react";
 import { teamApi } from "../api";
 import { TeamMember } from "../types";
+import ScrollAnimationWrapper from "@/components/ScrollAnimationWrapper";
 
 const TeamSection = () => {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
@@ -115,25 +116,28 @@ const TeamSection = () => {
   return (
     <section className="py-6 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 md:mb-12">
-          <div className="md:hidden mb-6">
-            <div className="inline-block bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-3 rounded-lg border border-primary/20 shadow-sm">
-              <h2 className="text-xl font-playfair font-bold text-primary">
-                Nossa Equipe Especializada
-              </h2>
+        <ScrollAnimationWrapper animation="fade-in-up">
+          <div className="text-center mb-8 md:mb-12">
+            <div className="md:hidden mb-6">
+              <div className="inline-block bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-3 rounded-lg border border-primary/20 shadow-sm">
+                <h2 className="text-xl font-playfair font-bold text-primary">
+                  Nossa Equipe Especializada
+                </h2>
+              </div>
             </div>
-          </div>
-          <h2 className="hidden md:block text-2xl md:text-4xl lg:text-5xl font-playfair font-bold text-primary mb-4 md:mb-6">
-            Nossa Equipe Especializada
-          </h2>
+            <h2 className="hidden md:block text-2xl md:text-4xl lg:text-5xl font-playfair font-bold text-primary mb-4 md:mb-6">
+              Nossa Equipe Especializada
+            </h2>
           {/* <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Profissionais qualificados e comprometidos com a excelência no atendimento 
             jurídico trabalhista, sempre pautados pela ética e conhecimento técnico.
           </p> */}
-        </div>
+          </div>
+        </ScrollAnimationWrapper>
 
         {/* Desktop Carousel - Shows 2 cards */}
-        <div className="relative mb-12 hidden md:block">
+        <ScrollAnimationWrapper animation="scale-in" delay={200}>
+          <div className="relative mb-12 hidden md:block">
           {/* Navigation Buttons */}
           {teamMembers.length > 2 && (
             <>
@@ -211,10 +215,12 @@ const TeamSection = () => {
               ))}
             </div>
           )}
-        </div>
+          </div>
+        </ScrollAnimationWrapper>
 
         {/* Mobile Carousel - Shows 1 card at a time */}
-        <div className="relative mb-8 md:hidden">
+        <ScrollAnimationWrapper animation="fade-in-up" delay={300}>
+          <div className="relative mb-8 md:hidden">
           {/* Scrollable Container - Shows 1 card */}
           <div
             ref={scrollContainerRef}
@@ -276,7 +282,8 @@ const TeamSection = () => {
               ))}
             </div>
           )}
-        </div>
+          </div>
+        </ScrollAnimationWrapper>
 
         {/* CTA Section */}
         {/* <div className="text-center">

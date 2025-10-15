@@ -40,12 +40,12 @@ const HeroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className={`text-4xl lg:text-6xl font-playfair font-bold text-primary leading-tight transition-all duration-1000 ease-out ${
+              <h1 className={`text-4xl lg:text-6xl font-playfair font-bold leading-tight transition-all duration-1000 ease-out ${
                 titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-              }`}>
+              }`} style={{ color: '#780000' }}>
                 Lorem Ipsum Dolor Sit
-                <span className="text-brown-dark"> Amet Consectetur</span>
-                <span className="text-gold-accent"> Adipiscing</span>
+                <span style={{ color: '#780000' }}> Amet Consectetur</span>
+                <span style={{ color: '#780000' }}> Adipiscing</span>
               </h1>
               
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 ease-out ${
@@ -59,7 +59,10 @@ const HeroSection = () => {
             <div className="flex justify-center">
               <Button 
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg"
+                className="text-white px-8 py-4 text-lg"
+                style={{ backgroundColor: '#01304A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#023a5c'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#01304A'}
                 onClick={() => window.open('https://wa.me/5511999999999?text=Olá, gostaria de mais informações.', '_blank')}
               >
                 Entre em Contato
