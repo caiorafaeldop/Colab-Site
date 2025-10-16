@@ -2,7 +2,7 @@ import { Instagram } from "lucide-react";
 
 const FloatingButtons = () => {
   const handleInstagramClick = () => {
-    window.open('https://www.instagram.com/paulomaiaadvocacia/', '_blank');
+    window.open('https://www.instagram.com/colab_ufpb/', '_blank');
   };
 
   return (
